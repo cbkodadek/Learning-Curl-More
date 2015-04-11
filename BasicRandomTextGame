@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>     
+#include <time.h>       
+
+
+
+using namespace std;
+
+string generateRandomResponse() {
+	srand (time(NULL));
+    const int MAXSIZE = 1000; int i = rand() % 2 + 1;
+string randomResponse[MAXSIZE];
+randomResponse[0] = "This can be one response\n";
+randomResponse[1] = "So can this\n";
+randomResponse[2] = "So on and so forth\n";
+
+return randomResponse[i];
+}
+
+int main() {
+int userResponse = 0;
+cout << "Hey you! What is your favorite number? ('1', '2', '3')" << endl;
+cin >> userResponse;
+cout << generateRandomResponse();
+
+
+    return 0;
+}
